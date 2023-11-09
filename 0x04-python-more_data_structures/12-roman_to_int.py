@@ -15,9 +15,8 @@ def roman_to_int(roman_string):
     """
 
     if (not isinstance(roman_string, str) or
-            roman_string is None or
-            len(roman_string) == 0):
-        return 0
+            roman_string is None):
+        return (0)
 
     roman_dict = {
             "I": 1,
@@ -31,13 +30,13 @@ def roman_to_int(roman_string):
     num = 0
 
     for i in range(len(roman_string)):
-        if roman_string[i] not in roman_dict:
-            return 0
+        if roman_dict.get(roman_string[i], 0) == 0:
+            return (0)
 
         if (i != (len(roman_string) - 1) and
                 roman_dict[roman_string[i]] < roman_dict[roman_string[i + 1]]):
-                num -= roman_dict[roman_string[i]]
+                num += roman_dict[roman_string[i]] * -1
         else:
             num += roman_dict[roman_string[i]]
 
-    return num
+    return (num)
