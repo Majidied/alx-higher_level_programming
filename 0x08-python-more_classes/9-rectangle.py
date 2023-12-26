@@ -18,7 +18,7 @@ class Rectangle:
         Rectangle.number_of_instances += 1
 
     @property
-    def with(self):
+    def width(self):
         """ getter for the privete width """
         return self.__width
     @width.setter
@@ -56,11 +56,11 @@ class Rectangle:
         string = ""
         if not self.__width or not self.__height:
             return ""
-        return ((str(self.print_symbol) *self.width + "\n") *
+        return ((str(self.print_symbol) * self.width + "\n") *
                 self.height)[:-1]
-    def __repre__(self):
+    def __repr__(self):
         """return a string of the representation of class rectangle"""
-        return "Rectangle((:d), (:d))".format(self.__width, self.__height)
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
     def __del__(self):
         """Print a message for every deletion of a recangle"""
         print("Bye rectangle...")

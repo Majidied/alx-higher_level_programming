@@ -12,7 +12,7 @@ class Rectangle:
         self.width = width
 
     @property
-    def with(self):
+    def width(self):
         """ getter for the privete width """
         return self.__width
     @width.setter
@@ -52,6 +52,6 @@ class Rectangle:
             string += "\n".join("#" * self.__width
                     for i in range(self.__height))
         return string
-    def __repre__(self):
+    def __repr__(self):
         """return a string of the representation of class rectangle"""
-        return "Rectangle((:d), (:d))".format(self.__width, self.__height)
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
