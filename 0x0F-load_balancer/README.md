@@ -18,7 +18,7 @@ Provide instructions on how to use your project.
 
 ## Authors
 
-Your Name
+Majidi Mohammed
 
 ## License
 
